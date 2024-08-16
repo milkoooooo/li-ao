@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 2fr 1fr; /* Diminuir a largura das colunas */
+    grid-template-areas:
+        "header header header"
+        "sidebar main-content extra-content"
+        "footer footer footer";
+    gap: 5px; /* Diminuir o espaço entre as áreas */
+    height: 50vh; /* Reduzir a altura do layout pela metade */
+    border: 1px solid black; /* Borda externa da grade */
+    padding: 5px; /* Diminuir o padding */
+}
+
+.header, .sidebar, .main-content, .extra-content, .footer {
+    border: 1px solid black; /* Bordas internas das áreas */
+    padding: 5px; /* Diminuir o padding das áreas */
+}
+
+.header {
+    grid-area: header;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e9ecef;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: #ffffff;
+}
+
+.extra-content {
+    grid-area: extra-content;
+    background-color: #e9ecef;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #f8f9fa;
+}
+</style>
+<body>
+    <div class="grid-container">
+        <header class="header">Cabeçalho</header>
+        <nav class="sidebar">Barra Lateral</nav>
+        <main class="main-content">Conteúdo Principal</main>
+        <aside class="extra-content">Conteúdo Extra</aside>
+        <footer class="footer">Rodapé</footer>
+    </div>
+</body>
+</html>
